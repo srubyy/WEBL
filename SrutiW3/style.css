@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* --- Container --- */
+.container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+/* --- Input Area --- */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+input[type="text"]:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+#addBtn {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+}
+
+#addBtn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+#addBtn:active {
+    transform: translateY(0);
+}
+
+/* --- Task List --- */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 15px;
+    word-break: break-all;
+    font-size: 1.05rem;
+}
+
+/* --- Action Buttons --- */
+.action-btn {
+    padding: 6px 12px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #333;
+    font-weight: 500;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    font-weight: 500;
+}
+
+/* --- Animation --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
