@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Voting Station</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for better aesthetics -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>🗳️ Digital Voting Station</h1>
+            <p>Enter your details to cast your vote!</p>
+        </header>
+
+        <div class="card">
+            <!-- Inputs Section -->
+            <div class="form-group">
+                <label for="voterName">Full Name:</label>
+                <input type="text" id="voterName" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="voterAge">Age:</label>
+                <input type="number" id="voterAge" placeholder="Enter your age">
+            </div>
+
+            <div class="form-group">
+                <label for="partySelect">Choose a Party:</label>
+                <select id="partySelect">
+                    <option value="none">-- Select a Party --</option>
+                    <option value="techno">Techno Party (Blue)</option>
+                    <option value="green">Green Earth Party (Green)</option>
+                    <option value="royal">Royalists (Purple)</option>
+                    <option value="sun">Sun Alliance (Yellow)</option>
+                </select>
+            </div>
+
+            <button id="voteBtn" onclick="castVote()">Cast Vote</button>
+
+            <!-- Feedback Section -->
+            <div id="statusBox" class="status-box hidden">
+                <p id="statusMessage">Waiting...</p>
+            </div>
+
+            <!-- Counter Section -->
+            <div class="counter-section">
+                <span>Total Votes Cast: </span>
+                <span id="voteCounter">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
